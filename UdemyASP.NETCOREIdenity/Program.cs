@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
+using UdemyASP.NETCOREIdenity.Authorization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options =>
@@ -10,12 +13,19 @@ builder.Services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", opt
 
 builder.Services.AddAuthorization(options =>
 {
+    options.AddPolicy("AdminOnly",
+        policy => policy.RequireClaim("AdminOnly"));
+
     options.AddPolicy("MustBelogToHRDepartment",
         policy => policy.RequireClaim("Department", "HR"));
 
-    options.AddPolicy("AdminOnly",
-        policy => policy.RequireClaim("AdminOnly"));
+    options.AddPolicy("HRManagerOnly", policy => policy
+        .RequireClaim("Department", "HR")
+        .RequireClaim("Manager")
+        .Requirements.Add(new HRManagerRequirement(3)));
 });
+
+builder.Services.AddSingleton<IAuthorizationHandler, HRManagerRequirementHandler>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

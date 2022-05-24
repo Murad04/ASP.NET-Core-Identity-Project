@@ -27,7 +27,9 @@ namespace UdemyASP.NETCOREIdenity.Pages.Account
                     new Claim(ClaimTypes.Name, "murad"),
                     new Claim(ClaimTypes.Email, "deneme@dede.com"),
                     new Claim("Department","HR"),
-                    new Claim("AdminOnly","true")
+                    new Claim("Manager","true"),
+                    new Claim("Admin","true"),
+                    new Claim("EmploymentDate","2022-02-24")
                 };
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal principal = new ClaimsPrincipal(identity);
