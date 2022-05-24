@@ -7,8 +7,8 @@ builder.Services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", opt
 {
     options.Cookie.Name = "MyCookieAuth";
     options.LoginPath = "/Account/Login";
-    options.LogoutPath = "/Account/Logout";
     options.AccessDeniedPath = "/AccessDenied";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(2);
 });
 
 builder.Services.AddAuthorization(options =>
@@ -21,8 +21,7 @@ builder.Services.AddAuthorization(options =>
 
     options.AddPolicy("HRManagerOnly", policy => policy
         .RequireClaim("Department", "HR")
-        .RequireClaim("Manager")
-        .Requirements.Add(new HRManagerRequirement(3)));
+        .RequireClaim("Manager").Requirements.Add(new HRManagerRequirement(3)));
 });
 
 builder.Services.AddSingleton<IAuthorizationHandler, HRManagerRequirementHandler>();

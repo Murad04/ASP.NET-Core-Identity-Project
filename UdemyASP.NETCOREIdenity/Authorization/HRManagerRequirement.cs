@@ -18,8 +18,7 @@ namespace UdemyASP.NETCOREIdenity.Authorization
             if(!context.User.HasClaim(x=>x.Type== "EmploymentDate"))
                 return Task.CompletedTask;
 
-            var value = context.User.FindFirst(x => x.Type == "EmploymentDate").Value; 
-            var employmentDate = DateTime.Parse(value);
+            DateTime.TryParse(context.User.FindFirst(x => x.Type == "Employment")?.Value, out DateTime employmentDate);
             var period = DateTime.Now - employmentDate;
             if (period.Days > 30 * requirement.Month)
                 context.Succeed(requirement);

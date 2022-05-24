@@ -29,12 +29,17 @@ namespace UdemyASP.NETCOREIdenity.Pages.Account
                     new Claim("Department","HR"),
                     new Claim("Manager","true"),
                     new Claim("Admin","true"),
-                    new Claim("EmploymentDate","2022-02-24")
+                    new Claim("EmploymentDate","2021-02-24")
                 };
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal principal = new ClaimsPrincipal(identity);
 
-                await HttpContext.SignInAsync("MyCookieAuth", principal);
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = Credentials.RememberMe
+                };
+
+                await HttpContext.SignInAsync("MyCookieAuth", principal, authProperties);
 
                 return RedirectToPage("/Index");
             }
@@ -49,5 +54,8 @@ namespace UdemyASP.NETCOREIdenity.Pages.Account
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; } = null!;
+
+        [Display(Name ="Remember me")]
+        public bool RememberMe { get; set; }
     }
 }
