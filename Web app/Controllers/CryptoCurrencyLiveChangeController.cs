@@ -42,7 +42,8 @@ namespace Web_app.Controllers
                 Coin = CryptoCurrencies[Random.Shared.Next(CryptoCurrencies.Length)],
                 Price = Price[Random.Shared.Next(Price.Length)],
                 MarketCap = MarketCap[Random.Shared.Next(MarketCap.Length)],
-                ChangeIn1Hour = ChangeIn1Hour[Random.Shared.Next(ChangeIn1Hour.Length)]
+                ChangeIn1Hour = ChangeIn1Hour[Random.Shared.Next(ChangeIn1Hour.Length)],
+                DateTime=DateTime.Now
             }).ToArray();
         }
     }
