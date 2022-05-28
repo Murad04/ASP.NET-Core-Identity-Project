@@ -7,5 +7,6 @@
         public double MarketCap { get; set; }
         public double ChangeIn1Hour { get; set; }
         public DateTime DateTime { get; set; }
+        public int Count { get; set; }
     }
 }

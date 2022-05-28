@@ -27,6 +27,11 @@ namespace Web_app.Controllers
             0.14,0.18,0.94,0.01,0.13
         };
 
+        private static readonly int[] Count = new[]
+        {
+            234343,324523,2343523,32454353,324213
+        };
+
         private readonly ILogger<CryptoCurrencyLiveChangeController> _logger;
 
         public CryptoCurrencyLiveChangeController(ILogger<CryptoCurrencyLiveChangeController> logger)
@@ -43,7 +48,8 @@ namespace Web_app.Controllers
                 Price = Price[Random.Shared.Next(Price.Length)],
                 MarketCap = MarketCap[Random.Shared.Next(MarketCap.Length)],
                 ChangeIn1Hour = ChangeIn1Hour[Random.Shared.Next(ChangeIn1Hour.Length)],
-                DateTime=DateTime.Now
+                DateTime=DateTime.Now,
+                Count = Count[Random.Shared.Next(Count.Length)]
             }).ToArray();
         }
     }
