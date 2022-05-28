@@ -1,0 +1,27 @@
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\appsettings.json
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Web app.exe
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Web app.deps.json
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Web app.runtimeconfig.json
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Web app.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Web app.pdb
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.AssemblyInfo.cs
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\scopedcss\bundle\Web app.styles.css
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.csproj.CopyComplete
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\refint\Web app.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.pdb
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\Web app.genruntimeconfig.cache
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\Web app\obj\Debug\net6.0\ref\Web app.dll

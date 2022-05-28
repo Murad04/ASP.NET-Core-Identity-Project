@@ -26,6 +26,12 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddSingleton<IAuthorizationHandler, HRManagerRequirementHandler>();
 
+builder.Services.AddHttpClient("WebAPI", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5224/");
+});
+
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 
