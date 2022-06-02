@@ -27,7 +27,7 @@ namespace Web_app.Controllers
                 //Creating the security context
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, "murad"),
+                    new Claim(ClaimTypes.Name, "Murad"),
                     new Claim(ClaimTypes.Email, "deneme@dede.com"),
                     new Claim("Department","HR"),
                     new Claim("Manager","true"),
