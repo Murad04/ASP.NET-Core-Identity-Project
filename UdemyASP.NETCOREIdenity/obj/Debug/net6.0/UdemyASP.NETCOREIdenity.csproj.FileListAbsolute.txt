@@ -24,3 +24,5 @@ C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\UdemyASP.NETCOREIdenity\obj\D
 C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\UdemyASP.NETCOREIdenity\obj\Debug\net6.0\UdemyASP.NETCOREIdenity.pdb
 C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\UdemyASP.NETCOREIdenity\obj\Debug\net6.0\UdemyASP.NETCOREIdenity.genruntimeconfig.cache
 C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\UdemyASP.NETCOREIdenity\obj\Debug\net6.0\ref\UdemyASP.NETCOREIdenity.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\UdemyASP.NETCOREIdenity\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\DELL\source\repos\UdemyASP.NETCOREIdenity\UdemyASP.NETCOREIdenity\obj\Debug\net6.0\UdemyASP.NETCOREIdenity.csproj.CopyComplete
