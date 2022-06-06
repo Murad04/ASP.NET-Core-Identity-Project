@@ -5,13 +5,13 @@ namespace Web_app.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
+    [Authorize(policy:"AdminOnly")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        };
 
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -20,10 +20,10 @@ namespace Web_app.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "Weather")]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random(); 
+            var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

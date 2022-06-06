@@ -31,6 +31,12 @@ builder.Services.AddHttpClient("WebAPI", client =>
     client.BaseAddress = new Uri("http://localhost:5224/");
 });
 
+builder.Services.AddSession(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.IdleTimeout = TimeSpan.FromHours(2);
+    options.Cookie.IsEssential = true;
+});
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -49,6 +55,8 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapRazorPages();
 
