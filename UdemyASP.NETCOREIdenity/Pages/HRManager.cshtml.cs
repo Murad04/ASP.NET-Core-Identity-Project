@@ -21,13 +21,39 @@ namespace UdemyASP.NETCOREIdenity.Pages.HRManager
         }
         public async Task OnGetAsync()
         {
+            WeatherForecasts = await InvokeEndpoint<List<WeatherForecastDTO>>("WebAPI", "WeatherForecast");
+        }
+        private async Task<JwtToken> Authenticate()
+        {
             var httpclient = httpClientFactory.CreateClient("WebAPI");
-            var res = await httpclient.PostAsJsonAsync("Auth", new Credentials { Name = "Murad", Password = "password" });
+            var res = await httpclient.PostAsJsonAsync("auth", new Credentials { Name = "Murad", Password = "password" });
             res.EnsureSuccessStatusCode();
             string strJwt = await res.Content.ReadAsStringAsync();
-            var token = JsonConvert.DeserializeObject<JwtToken>(strJwt);
-            httpclient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.AccessToken);
-            WeatherForecasts = await httpclient.GetFromJsonAsync<List<WeatherForecastDTO>>("WeatherForecast");
+            HttpContext.Session.SetString("access_token",strJwt);
+            return JsonConvert.DeserializeObject<JwtToken>(strJwt);
+        }
+        private async Task<T> InvokeEndpoint<T>(string clientName,string url)
+        {
+            //get token from session
+            JwtToken? token = null;
+            var strTokenObj = HttpContext.Session.GetString("access_token");
+            if (string.IsNullOrWhiteSpace(strTokenObj))
+            {
+                token = await Authenticate();
+            }
+            else
+            {
+                token = JsonConvert.DeserializeObject<JwtToken>(strTokenObj);
+            }
+            if (token == null ||
+                string.IsNullOrWhiteSpace(token.AccessToken) ||
+                token.ExpiresAt <= DateTime.UtcNow)
+            {
+                token = await Authenticate();
+            }
+            var httpclient = httpClientFactory.CreateClient(clientName);
+            httpclient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token?.AccessToken);
+            return await httpclient.GetFromJsonAsync<T>(url);
         }
     }
 }
