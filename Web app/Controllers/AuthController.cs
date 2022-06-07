@@ -39,7 +39,7 @@ namespace Web_app.Controllers
 
                 return Ok(new
                 {
-                    access_token = CreateToken(claims,expiresAt),
+                    access_token = CreateToken(claims, expiresAt),
                     expires_at = expiresAt,
                 });
             }
@@ -60,7 +60,7 @@ namespace Web_app.Controllers
                     SecurityAlgorithms.HmacSha256Signature)
                 );
 
-            return new JwtSecurityTokenHandler().WriteToken(jwt); 
+            return new JwtSecurityTokenHandler().WriteToken(jwt);
         }
     }
 }
