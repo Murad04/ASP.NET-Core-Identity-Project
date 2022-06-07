@@ -26,7 +26,7 @@ namespace UdemyASP.NETCOREIdenity.Pages.HRManager
         private async Task<JwtToken> Authenticate()
         {
             var httpclient = httpClientFactory.CreateClient("WebAPI");
-            var res = await httpclient.PostAsJsonAsync("auth", new Credentials { Name = "Murad", Password = "password" });
+            var res = await httpclient.PostAsJsonAsync("Auth", new Credentials { Name = "Murad", Password = "password" });
             res.EnsureSuccessStatusCode();
             string strJwt = await res.Content.ReadAsStringAsync();
             HttpContext.Session.SetString("access_token",strJwt);

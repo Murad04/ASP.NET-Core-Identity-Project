@@ -37,6 +37,11 @@ builder.Services.AddAuthorization(options =>
         policy => policy.RequireClaim("Manager"));
 });
 
+builder.Services.AddCors(cors =>
+{
+    cors.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+});
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -51,6 +56,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
+app.UseCors(options => options.AllowAnyOrigin());
 
 app.UseAuthentication();
 app.UseAuthorization();
