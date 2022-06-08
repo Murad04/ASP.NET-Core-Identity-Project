@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyASP.NETCOREIdenity", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web app", "Web app\Web app.csproj", "{273B3EDB-9C11-480A-B5B6-C0EF2C415154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Identity", "Project Identity\Project Identity.csproj", "{3B0D3EC1-CBB7-4B10-A859-D029C336A9FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project Identity", "Project Identity\Project Identity.csproj", "{3B0D3EC1-CBB7-4B10-A859-D029C336A9FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

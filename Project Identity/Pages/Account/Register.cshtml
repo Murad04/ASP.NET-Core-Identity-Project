@@ -1,0 +1,40 @@
+﻿@page
+@model Project_Identity.Pages.Account.RegisterModel
+@{
+}
+
+<p>
+    <h3>User Registration</h3>
+</p>
+<div class="container border" style="padding:20px;">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="registerViewModel.Email"></label>
+            </div>
+            <div class="col">
+                <input type="text" asp-for="registerViewModel.Email" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="registerViewModel.Email"></span>
+        </div>
+        <br />
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="registerViewModel.Password"></label>
+            </div>
+            <div class="col">
+                <input type="text" asp-for="registerViewModel.Password" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="registerViewModel.Password"></span>
+        </div>
+        <div class="form-group row">
+             <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Login"/>
+            </div>
+            <div class="col-5">
+
+            </div>
+        </div>
+    </form>
+</div>
