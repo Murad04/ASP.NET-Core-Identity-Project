@@ -36,11 +36,17 @@ namespace Project_Identity.Pages.Account
             var result = await this.userManager.CreateAsync(user, registerViewModel.Password);
             if (result.Succeeded)
             {
-                return RedirectToPage("/Account/Login");
+                var confirmationToken = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
+                // return Redirect();
+
+                var confirmationLink = Url.PageLink(pageName: "/Account/ConfirmEmail", values: new { userId = user.Id, token = confirmationToken });
+
+
+                //return RedirectToPage("/Account/Login");
             }
             else
             {
-                foreach(var error in result.Errors)
+                foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError("Register", error.Description);
                 }
