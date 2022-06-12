@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Project_Identity.ViewModels;
+using System.Net;
+using System.Net.Mail;
 
 namespace Project_Identity.Pages.Account
 {
@@ -24,7 +26,7 @@ namespace Project_Identity.Pages.Account
         {
             if (!ModelState.IsValid) return Page();
 
-            //Validating email address
+            //Validating email address                  
 
             //Create the user
             var user = new IdentityUser
@@ -37,11 +39,8 @@ namespace Project_Identity.Pages.Account
             if (result.Succeeded)
             {
                 var confirmationToken = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
-                return Redirect(Url.PageLink(pageName: "/Account/ConfirmEmail", values: new { userId = user.Id, token = confirmationToken }));
-
-                
-
-                //return RedirectToPage("/Account/Login");
+                var  confirmationLink = Url.PageLink(pageName: "/Account/ConfirmEmail", values: new { userId = user.Id, token = confirmationToken });
+                return Redirect(confirmationLink);
             }
             else
             {
