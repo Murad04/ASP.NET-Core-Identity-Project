@@ -23,15 +23,7 @@ namespace UdemyASP.NETCOREIdenity.Pages.HRManager
         {
             WeatherForecasts = await InvokeEndpoint<List<WeatherForecastDTO>>("WebAPI", "WeatherForecast");
         }
-        private async Task<JwtToken> Authenticate()
-        {
-            var httpclient = httpClientFactory.CreateClient("WebAPI");
-            var res = await httpclient.PostAsJsonAsync("Auth", new Credentials { Name = "Murad", Password = "password" });
-            res.EnsureSuccessStatusCode();
-            string strJwt = await res.Content.ReadAsStringAsync();
-            HttpContext.Session.SetString("access_token",strJwt);
-            return JsonConvert.DeserializeObject<JwtToken>(strJwt);
-        }
+        
         private async Task<T> InvokeEndpoint<T>(string clientName,string url)
         {
             //get token from session
@@ -54,6 +46,16 @@ namespace UdemyASP.NETCOREIdenity.Pages.HRManager
             var httpclient = httpClientFactory.CreateClient(clientName);
             httpclient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token?.AccessToken);
             return await httpclient.GetFromJsonAsync<T>(url);
+        }
+
+        private async Task<JwtToken> Authenticate()
+        {
+            var httpclient = httpClientFactory.CreateClient("WebAPI");
+            var res = await httpclient.PostAsJsonAsync("Auth", new Credentials { Name = "Murad", Password = "password" });
+            res.EnsureSuccessStatusCode();
+            string strJwt = await res.Content.ReadAsStringAsync();
+            HttpContext.Session.SetString("access_token", strJwt);
+            return JsonConvert.DeserializeObject<JwtToken>(strJwt);
         }
     }
 }
