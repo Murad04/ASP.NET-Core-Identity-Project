@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Project Identity",
+    "\\Project Identity\\Pages",
+    "\\Project Identity\\Pages\\Account"
   ],
+  "SelectedNode": "\\Project Identity\\Pages\\Account\\Register.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -8,11 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UdemyASP.NETCOREIdenity
 build_property.RootNamespace = UdemyASP.NETCOREIdenity
-build_property.ProjectDir = C:\Users\DELL\source\repos\Murad04\ASP.NET-Core-Identity-Project\UdemyASP.NETCOREIdenity\
+build_property.ProjectDir = C:\Users\DELL\Source\Repos\Murad04\ASP.NET-Core-Identity-Project\UdemyASP.NETCOREIdenity\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DELL\source\repos\Murad04\ASP.NET-Core-Identity-Project\UdemyASP.NETCOREIdenity
+build_property.MSBuildProjectDirectory = C:\Users\DELL\Source\Repos\Murad04\ASP.NET-Core-Identity-Project\UdemyASP.NETCOREIdenity
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/DELL/source/repos/Murad04/ASP.NET-Core-Identity-Project/UdemyASP.NETCOREIdenity/Pages/AccessDenied.cshtml]
