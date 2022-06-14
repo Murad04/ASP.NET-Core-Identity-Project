@@ -46,9 +46,8 @@ namespace Project_Identity.Pages.Account
             var result = await this.userManager.CreateAsync(user, registerViewModel.Password);
             if (result.Succeeded)
             {
-                //Adding the "Position" from claim
+                //Adding the "Position" and "Department_Code" from claim  
                 await this.userManager.AddClaimAsync(user, claimPosition);
-                //Adding the "Department_Code" from claim
                 await this.userManager.AddClaimAsync(user, claimDepartmentCode);
  
                 var confirmationToken = await this.userManager.GenerateEmailConfirmationTokenAsync(user);

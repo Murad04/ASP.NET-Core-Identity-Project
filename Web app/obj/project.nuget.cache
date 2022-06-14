@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QUIbqq/MQhnMQHsNM7mRiTj9y1/usq834y96ZzFLxkJnmg1sRmWwiGzrumYI9MhHg7Ilpg2Ufi2t/BL+6WtKTQ==",
+  "dgSpecHash": "CoZiW4CHtqw5jrIZm/akwkF1oFfxCnNqHttuv12gAcrBijwvKPbe5vUtxiLd3pOEbBBRtvHEF0+xDgn7UWVA9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\UdemyASP.NETCOREIdenity\\Web app\\Web app.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Murad04\\ASP.NET-Core-Identity-Project\\Web app\\Web app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.5\\microsoft.aspnetcore.authentication.jwtbearer.6.0.5.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
