@@ -36,14 +36,18 @@ namespace Project_Identity.Pages.Account
                 Email = registerViewModel.Email,
                 UserName = registerViewModel.Email,
                 Department = registerViewModel.Department,
-                Position = registerViewModel.Position
+                //Position = registerViewModel.Position
             };
-            
+
+            var claimPosition = new Claim("Position", registerViewModel.Position);
+
             var claimDepartmentCode = new Claim("Department_Code", registerViewModel.Department_Code);
             
             var result = await this.userManager.CreateAsync(user, registerViewModel.Password);
             if (result.Succeeded)
             {
+                //Adding the "Position" from claim
+                await this.userManager.AddClaimAsync(user, claimPosition);
                 //Adding the "Department_Code" from claim
                 await this.userManager.AddClaimAsync(user, claimDepartmentCode);
  
