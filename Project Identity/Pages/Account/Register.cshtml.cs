@@ -48,6 +48,7 @@ namespace Project_Identity.Pages.Account
             {
                 //Adding the "Position" from claim
                 await this.userManager.AddClaimAsync(user, claimPosition);
+
                 //Adding the "Department_Code" from claim
                 await this.userManager.AddClaimAsync(user, claimDepartmentCode);
  
