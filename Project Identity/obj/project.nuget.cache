@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wS3KEFdXN+7i+SZwk1PvPKcR94m8d0z/tEl3lu5SanHWLzUhnxUoCyuhMxcIwhod630TFhqcxYZ1eNmL6W44Ag==",
+  "dgSpecHash": "q2sG8bMAZOrK802ti61ahcHV2zy8Iqj83Yto1FL32jkw43jkiRfJx/38aWWwIPc/8g+LNed8Urkx90v7ZtyJeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\UdemyASP.NETCOREIdenity\\Project Identity\\Project Identity.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Murad04\\ASP.NET-Core-Identity-Project\\Project Identity\\Project Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

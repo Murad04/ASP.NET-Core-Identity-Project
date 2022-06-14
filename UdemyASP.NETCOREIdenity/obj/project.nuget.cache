@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "383gHY87CLdXbp0UuOCV3s+iZIUV0QneqbU2NnlpV4TcGWtCWKS0tyo08mlp8Oxhmukr5I1KhT/T5jUfs1ILGQ==",
+  "dgSpecHash": "5WMZeLoxtrWYxYt6t6nBmXJuUq65ZY2P3LwBvnYyB8Gd4fH3VMlfsTS1gDmYPp+ngIcosdwXiddFpzTKmsJ2Cg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\UdemyASP.NETCOREIdenity\\UdemyASP.NETCOREIdenity\\UdemyASP.NETCOREIdenity.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Murad04\\ASP.NET-Core-Identity-Project\\UdemyASP.NETCOREIdenity\\UdemyASP.NETCOREIdenity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
