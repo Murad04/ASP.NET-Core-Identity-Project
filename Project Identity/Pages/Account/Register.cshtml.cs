@@ -36,7 +36,7 @@ namespace Project_Identity.Pages.Account
                 Email = registerViewModel.Email,
                 UserName = registerViewModel.Email,
                 Department = registerViewModel.Department,
-                //Position = registerViewModel.Position
+                Position = registerViewModel.Position
             };
 
             var claimPosition = new Claim("Position", registerViewModel.Position);
@@ -53,7 +53,7 @@ namespace Project_Identity.Pages.Account
  
                 var confirmationToken = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
                 var  confirmationLink = Url.PageLink(pageName: "/Account/ConfirmEmail", values: new { userId = user.Id, token = confirmationToken });
-                return Redirect(confirmationLink);
+                return RedirectToPage(confirmationLink);
             }
             else
             {
