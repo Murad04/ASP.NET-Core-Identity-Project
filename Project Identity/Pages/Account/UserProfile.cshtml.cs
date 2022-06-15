@@ -50,7 +50,7 @@ namespace Project_Identity.Pages.Account
             }
             catch
             {
-                ModelState.AddModelError("UserProfile", "Error");
+                ModelState.AddModelError("UserProfile", "Error occurred when updating the profile");
             }
 
             this.Message = "User profile saved";
