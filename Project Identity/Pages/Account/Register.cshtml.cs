@@ -36,24 +36,25 @@ namespace Project_Identity.Pages.Account
                 Email = registerViewModel.Email,
                 UserName = registerViewModel.Email,
                 Department = registerViewModel.Department,
-                Position = registerViewModel.Position
+                Position = registerViewModel.Position,
+                Department_Code = registerViewModel.Department_Code
             };
 
-            var claimPosition = new Claim("Position", registerViewModel.Position);
+            //var claimDepartmentCode = new Claim("Department_Code", registerViewModel.Department_Code);
 
-            var claimDepartmentCode = new Claim("Department_Code", registerViewModel.Department_Code);
-            
+            var departmentclaim = new Claim("Department", registerViewModel.Department);
+
+            var positionclaim = new Claim("Position", registerViewModel.Position);
+
             var result = await this.userManager.CreateAsync(user, registerViewModel.Password);
             if (result.Succeeded)
             {
-                //Adding the "Position" from claim
-                await this.userManager.AddClaimAsync(user, claimPosition);
-                //Adding the "Department_Code" from claim
-                await this.userManager.AddClaimAsync(user, claimDepartmentCode);
- 
+                await this.userManager.AddClaimAsync(user, departmentclaim);
+                await this.userManager.AddClaimAsync(user, positionclaim);
+
                 var confirmationToken = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
-                var  confirmationLink = Url.PageLink(pageName: "/Account/ConfirmEmail", values: new { userId = user.Id, token = confirmationToken });
-                return RedirectToPage(confirmationLink);
+
+                return Redirect(Url.PageLink(pageName: "/Account/Email/ConfirmEmail", values: new { userID = user.Id, token = confirmationToken }));
             }
             else
             {

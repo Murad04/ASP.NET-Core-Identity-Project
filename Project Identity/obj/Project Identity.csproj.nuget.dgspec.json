@@ -11,7 +11,7 @@
         "projectName": "Project Identity",
         "projectPath": "C:\\Users\\DELL\\source\\repos\\Murad04\\ASP.NET-Core-Identity-Project\\Project Identity\\Project Identity.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\Murad04\\ASP.NET-Core-Identity-Project\\Project Identity\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\Murad04\\ASP.NET-Core-Identity-Project\\Project Identity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

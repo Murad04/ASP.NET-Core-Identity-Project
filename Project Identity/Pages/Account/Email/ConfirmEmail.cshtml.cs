@@ -19,7 +19,7 @@ namespace Project_Identity.Pages.Account.Email
         public async Task<IActionResult> OnGetAsync(string userID,string token)
         {
             var user = await this.userManager.FindByIdAsync(userID);
-            if(user == null)
+            if(user != null)
             {
                 var result = await this.userManager.ConfirmEmailAsync(user, token);
                 if(result.Succeeded)
